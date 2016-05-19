@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-# TODO(alexis): add **tests** (and try unittest.mock.MagicMock at the same
-# time).
-
 import collections
 import random
 
@@ -28,8 +24,7 @@ class DE(object):
         self.F = F
         self.CR = CR
 
-    # TODO(alexis): add a fitness_aim param?
-    # TODO(alexis): add a generic way to generate initial pop?
+
     def solve(self, fitness, initial_population, iterations=1000):
         current_generation = [Individual(ind, fitness(*ind)) for ind in
                               initial_population]
@@ -160,7 +155,7 @@ class DE(object):
 if __name__ == '__main__':
     import math
 
-    # http://tracer.lcc.uma.es/problems/ackley/ackley.html
+
     def ackley_2d(x, y):
         return (20 + math.e
                 - 20 * math.exp(-.2 * (.5 * (x ** 2 + y ** 2)) ** .5)
